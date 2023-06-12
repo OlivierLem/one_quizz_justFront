@@ -4,10 +4,14 @@ import './Acceuil.scss';
 import ReactGA from 'react-ga4'
 
 export default function Acceuil () {
-    ReactGA.send({
-        hitType:'pageview', 
-        page:'accueil'
-    })
+    
+    useEffect(() => {
+        ReactGA.send({
+            hitType:'pageview', 
+            page:'accueil',
+            title: 'homepage'
+        })
+    }, [])
 
     return (
         <div className={`main`} >
