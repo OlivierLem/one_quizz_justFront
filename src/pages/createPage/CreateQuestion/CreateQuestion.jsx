@@ -16,7 +16,8 @@ export function CreateQuestion ({question}) {
     useEffect(() => {
         ReactGA.send({
             hitType:'pageview', 
-            page:'créer question'
+            page:'/creer_question',
+            title: 'créer question'
         })
     }, [])
 

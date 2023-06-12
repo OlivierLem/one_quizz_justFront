@@ -15,7 +15,8 @@ export default function ProfilPage () {
     useEffect(() => {
         ReactGA.send({
             hitType:'pageview', 
-            page:'profile'
+            page:'/profile', 
+            title: 'profile'
         })
     }, [])
 

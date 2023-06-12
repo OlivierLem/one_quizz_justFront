@@ -10,7 +10,8 @@ export function CreerQuizz () {
     useEffect(() => {
         ReactGA.send({
             hitType:'pageview', 
-            page:'créer quizz'
+            page:'/creer_quizz',
+            title: 'créer quizz'
         })
     }, [])
 

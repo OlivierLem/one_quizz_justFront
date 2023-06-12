@@ -14,7 +14,8 @@ export default function CreerCours ({title}) {
     useEffect(() => {
         ReactGA.send({
             hitType:'pageview', 
-            page:'créer quizz'
+            page:'/creer_cours',
+            title: 'créer cour'
         })
     }, [])
     function handleClick (e) {

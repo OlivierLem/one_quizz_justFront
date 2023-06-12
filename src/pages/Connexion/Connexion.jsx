@@ -17,7 +17,8 @@ export default function Connexion () {
     useEffect(() => {
         ReactGA.send({
             hitType:'pageview', 
-            page:'logs'
+            page:'/connexion',
+            title: 'logs'
         })
     }, [])
 

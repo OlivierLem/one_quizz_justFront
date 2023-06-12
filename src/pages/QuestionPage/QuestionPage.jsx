@@ -38,7 +38,8 @@ export function QuestionPage () {
     useEffect(() => {
         ReactGA.send({
             hitType:'pageview', 
-            page:'vos question'
+            page:'/question',
+            title: 'vos questions'
         })
     }, [])
 
