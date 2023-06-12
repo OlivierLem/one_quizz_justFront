@@ -3,13 +3,22 @@ import { useRef, useState } from "react"
 import { useForm } from 'react-hook-form'
 import * as yup from 'yup'
 import { yupResolver } from "@hookform/resolvers/yup";
+import ReactGA from 'react-ga4'
 
 export function CreateQuestion ({question}) {
     
-    console.log(question);
     const [step, setStep] = useState(1)
     const [showQuestion, setShowQuestion] = useState(false)
     const formRef = useRef();
+
+    console.log(question);
+
+    useEffect(() => {
+        ReactGA.send({
+            hitType:'pageview', 
+            page:'créer question'
+        })
+    }, [])
 
     const defaultValues = {
         type: `${question?.questionType ?? 'qcm'}`,

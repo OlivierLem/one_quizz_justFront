@@ -2,6 +2,7 @@ import { Fragment, useContext, useEffect, useRef, useState } from "react"
 import { Question } from "./component/Question";
 import './QuestionPage.scss'
 import AuthProvider from "../../components/AuthProvider/AuthProvider";
+import ReactGA from 'react-ga4';
 
 export function QuestionPage () {
 
@@ -33,6 +34,13 @@ export function QuestionPage () {
         questionType: 'qcm',
         status: 'public'
     }]);
+
+    useEffect(() => {
+        ReactGA.send({
+            hitType:'pageview', 
+            page:'vos question'
+        })
+    }, [])
 
     return (
         <section className="questionPage">

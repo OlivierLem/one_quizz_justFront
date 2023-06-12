@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import { NavLink } from "react-router-dom";
 import styles from './ProfilePage.module.scss'
+import ReactGA from 'react-ga4'
 
 export default function ProfilPage () {
 
@@ -10,6 +11,13 @@ export default function ProfilPage () {
     const handleClick = () => {
         signout();
     }
+
+    useEffect(() => {
+        ReactGA.send({
+            hitType:'pageview', 
+            page:'profile'
+        })
+    }, [])
 
     return (
         <div className={styles.profile}>

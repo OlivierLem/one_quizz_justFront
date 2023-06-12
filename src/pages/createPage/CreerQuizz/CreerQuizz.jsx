@@ -1,10 +1,18 @@
 import '../CreatePages.scss'
 import { useState } from "react"
+import ReactGA from 'react-ga4'
 
 export function CreerQuizz () {
 
     const [mode, setMode] = useState(true)
     const [step, setStep] = useState(1)
+
+    useEffect(() => {
+        ReactGA.send({
+            hitType:'pageview', 
+            page:'créer quizz'
+        })
+    }, [])
 
     return (
         <div>

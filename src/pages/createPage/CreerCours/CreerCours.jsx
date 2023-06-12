@@ -2,6 +2,7 @@ import { useState } from "react";
 import TextComponent from "./composant/TextComponent.jsx";
 import TitleComponent from "./composant/TitleComponent.jsx";
 import './CreerCours.scss'
+import ReactGA from 'react-ga4'
 
 export default function CreerCours ({title}) {
 
@@ -9,7 +10,13 @@ export default function CreerCours ({title}) {
     const [create, setCreate] = useState(false)
     const [edit, setEdit] = useState(false)
     const [newTitle, setNewTitle] = useState(title)
-
+    
+    useEffect(() => {
+        ReactGA.send({
+            hitType:'pageview', 
+            page:'créer quizz'
+        })
+    }, [])
     function handleClick (e) {
         const {value} = e.target.dataset;
         setCreate(!create);

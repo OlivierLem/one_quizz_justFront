@@ -6,12 +6,20 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { Inscription } from './Inscription';
 import { AuthContext } from '../../context/AuthContext';
 import { Navigate, useSearchParams } from 'react-router-dom';
+import ReactGA from 'react-ga4';
 
 export default function Connexion () {
 
     const { signin, user} = useContext(AuthContext)
     const [reveal, setReveal] = useState(false)
     const formRef = useRef()
+
+    useEffect(() => {
+        ReactGA.send({
+            hitType:'pageview', 
+            page:'logs'
+        })
+    }, [])
 
     const defaultValues = {
         pseudo: '',

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import CardTheme from "../Acceuil/sliderThemes/components/CardTheme"
 import './ThemePage.scss'
 import { themes } from "../../data/themes"
+import ReactGA from 'react-ga4'
 
 export default function ThemesPage () {
 
@@ -13,6 +14,13 @@ export default function ThemesPage () {
         })
         console.log(themes);
     },[]) */
+
+    useEffect(() => {
+        ReactGA.send({
+            hitType:'pageview', 
+            page:'themes'
+        })
+    }, [])
 
     return (
 
