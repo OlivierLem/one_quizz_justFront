@@ -1,7 +1,16 @@
 import { NavLink, Outlet } from "react-router-dom";
 import './AdminPage.scss'
+import { useEffect } from "react";
+import ReactGA from 'react-ga4';
 
 export function AdminPage () {
+    useEffect(() => {
+        ReactGA.send({
+            hitType:'pageview', 
+            page:'admin'
+        })
+    }, [])
+
     return (
         <section>
             <div className="headerAdmin">

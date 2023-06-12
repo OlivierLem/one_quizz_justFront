@@ -16,6 +16,7 @@ function App() {
   ReactGA.initialize('G-P2R4PKPWC7', 
     {debug: true})
  }, [])
+  console.log('app')
   return (
     <div className={`d-flex flex-column ${styles.appContainer}`}>
       <AuthProvider>

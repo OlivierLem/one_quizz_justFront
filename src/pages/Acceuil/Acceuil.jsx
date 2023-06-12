@@ -2,6 +2,7 @@ import SliderQuizz from "./sliderQuizz/SliderQuizz";
 import SliderThemes from "./sliderThemes/SliderThemes";
 import './Acceuil.scss';
 import ReactGA from 'react-ga4'
+import { useEffect } from "react";
 
 export default function Acceuil () {
     

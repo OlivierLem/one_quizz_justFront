@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TextComponent from "./composant/TextComponent.jsx";
 import TitleComponent from "./composant/TitleComponent.jsx";
 import './CreerCours.scss'

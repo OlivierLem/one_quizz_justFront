@@ -1,6 +1,7 @@
 import { NavLink, useRouteError } from "react-router-dom"
 import styles from './ErrorPage.module.scss'
 import ReactGA from 'react-ga4';
+import { useEffect } from "react";
 
 export default function ErrorPage () {
     const error = useRouteError();

@@ -18,7 +18,8 @@ export default function ThemesPage () {
     useEffect(() => {
         ReactGA.send({
             hitType:'pageview', 
-            page:'themes'
+            page:'/themes',
+            title:'themes'
         })
     }, [])
 
